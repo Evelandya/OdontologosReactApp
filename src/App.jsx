@@ -1,4 +1,3 @@
-import './App.css'
 import Home from './routes/Home'
 import Details from './routes/Details'
 import Contact from './routes/Contact'
@@ -15,7 +14,7 @@ function App() {
 
   return (
     <>
-    <div className={theme.value}>
+    <div className={theme.value + " " + "container"}>
     <Header />
     <Routes>
       <Route path="/" element={<Home />}></Route>

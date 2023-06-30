@@ -4,6 +4,12 @@
   min-height: 100vh;
 }
 
+#root {
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+  min-height: 100vh;
+}
+
 a {
   font-weight: 500;
   text-decoration: inherit;
@@ -121,6 +127,13 @@ input::placeholder {
   color: #1a1a1a;
 }
 
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .theme-light > header nav a, .theme-light > .section-home .list-card a{
   color: #1a1a1a;
 }
@@ -178,4 +191,5 @@ section{
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
   padding-bottom: 160px;
   padding-top: 100px;
+  height: 100%;
 }
