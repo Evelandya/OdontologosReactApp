@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import Card from "../components/Card";
+import Card from "../components/card/Card";
 
 function Home() {
 
     const [users, setUsers] = useState([])
+    const [favs, setFavs] = useState(JSON.parse(localStorage.getItem('odontologosFavs') || '[]'))
 
     useEffect(() => {
         async function fetchData() {
@@ -14,18 +15,27 @@ function Home() {
         fetchData()
       }, [])
 
- console.log(users)
+      const addToFavs = (user) => {
+        let newFavs
+        if (favs.some((fav) => fav.id === user.id)) {
+          newFavs = favs.filter((fav) => fav.id !== user.id)
+        } else {
+          newFavs = [...favs, user]
+        }
+        setFavs(newFavs)
+        localStorage.setItem('odontologosFavs', JSON.stringify(newFavs))
+      }
+
     return (
-        <section>
+        <section className="section-home">
             <h1>Dentistas</h1>
+            <div className="d-grid list-card">
             {users.map((user)=>
-            (<Card name={user.name} username={user.username} key={user.id}></Card>)
+            (<Card user={user} onClick={addToFavs} key={user.id}></Card>)
             )}
+            </div>
         </section>
      );
 }
 
 export default Home;
-/*{users.map((user) => (
-            <Card key={user.id} user={user}></Card>
-            ))}*/

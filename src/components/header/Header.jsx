@@ -11,11 +11,12 @@ function Header() {
       <>
       <header className={styles.header +" "+ theme.value}>
         <nav className={styles.nav}>
+          <Link to="./home"><i className="fa-solid fa-tooth"></i></Link>
           <Link to="./home">Home</Link>
           <Link to="./contacto">Contacto</Link>
           <Link to="./favs">Favoritos</Link>
         </nav>
-        <button onClick={()=> theme.changeValue()}>Cambiar Tema</button>
+        <button onClick={()=> theme.changeValue()}><i className="fa-regular fa-circle-half-stroke"></i></button>
       </header>
       </>
     );

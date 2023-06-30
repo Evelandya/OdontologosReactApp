@@ -11,8 +11,11 @@ function Contact() {
 
     return (
         <>
-        <FormContact onSubmit={handleSubmit}/>
-        <p>{mensajeExito}</p>
+        <section className="section-contact">
+            <h1>Contactanos</h1>
+            <FormContact onSubmit={handleSubmit}/>
+            {mensajeExito && <p className="msj-exito"><i className="fa-light fa-face-smile-wink"></i> {mensajeExito}</p>}
+        </section>
         </>
      );
 }

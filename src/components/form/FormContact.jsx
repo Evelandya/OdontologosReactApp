@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import styles from './FormContact.module.css'
 const FormContact = (props) => {
 
     const [nombre, setNombre] = useState('')
@@ -23,12 +23,18 @@ const FormContact = (props) => {
 
     return (
     <>
-    <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Tu Nombre Completo" value={nombre} onChange={(e) => setNombre(e.target.value)}/>
-        <input type="email" placeholder="Tu Email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
-        <button type="submit">Contactar</button>
+    <form className={styles.form} onSubmit={handleSubmit}>
+    <div className={styles.formRow}>
+    <div className="d-flex f-dir-colum">
+      <input type="text" placeholder="Nombre Completo" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
+      <br />
+      <input className={styles.input} placeholder="Email" type="email" value={email} onChange={(e)=> setEmail(e.target.value)} required/>
+      <br />
+    </div>
+    </div>
+    <button className={styles.btnForm} type="submit">Contactar</button>
     </form>
-    {mensajeError && <p>{mensajeError}</p>}
+    {mensajeError && <p className={styles.error}>{mensajeError}</p>}
     </> );
 }
 

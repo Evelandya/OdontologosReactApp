@@ -3,15 +3,11 @@ import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom';
 import ThemeProvider from './contexts/ThemeContext.jsx';
-//import { BrowserRouter } from 'react-router-dom'
-//import Header from './components/header/Header.jsx'
-//import Footer from './components/Footer.jsx'
-//import ThemeProvider from './contexts/ThemeContext.jsx'
 
 ReactDOM.createRoot(document.getElementById("root")).render(
- <ThemeProvider>
+    <ThemeProvider>
       <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </ThemeProvider>
+        <App />
+      </BrowserRouter>
+    </ThemeProvider>
 );

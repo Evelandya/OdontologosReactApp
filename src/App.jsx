@@ -6,7 +6,7 @@ import Favs from './routes/Favs'
 import { useContext } from "react";
 import { ThemeContext } from './contexts/ThemeContext'
 import Header from './components/header/Header'
-import Footer from './components/Footer'
+import Footer from './components/footer/Footer'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
