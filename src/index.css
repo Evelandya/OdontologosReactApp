@@ -144,9 +144,11 @@ input::placeholder {
   color:  #f9f9f9;
 }
 
-.theme-dark > header nav a, .theme-dark > .section-home .list-card a i{
+.theme-dark > header nav a, .theme-dark > .section-home .list-card a i, .theme-dark > .section-favs a i{
   color:  #f9f9f9;
 }
+
+.section-favs
 
 .theme-dark> header nav a:hover{
   color: rgb(0 151 240);

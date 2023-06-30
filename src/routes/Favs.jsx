@@ -22,7 +22,7 @@ function Favs() {
 
     return (
     <>
-    <section>
+    <section className="section-favs">
     <h1>Mis Favoritos</h1>
     {favs.length === 0 ? (
         <div className="msj-favs">No tienes odontologos favoritos.</div>
