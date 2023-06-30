@@ -18,6 +18,7 @@ function App() {
     <div className={theme.value}>
     <Header />
     <Routes>
+      <Route path="/" element={<Home />}></Route>
       <Route path="/home" element={<Home />}></Route>
       <Route path='/dentist/:id' element={<Details />}></Route>
       <Route path='/contacto' element={<Contact />}></Route>
