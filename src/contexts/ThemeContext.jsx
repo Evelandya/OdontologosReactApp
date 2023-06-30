@@ -18,7 +18,6 @@ function ThemeProvider(props) {
 
     return(
         <ThemeContext.Provider value={returnedValue}>
-            {/*eslint-disable-next-line react/prop-types*/}
             {props.children}
         </ThemeContext.Provider>
     )

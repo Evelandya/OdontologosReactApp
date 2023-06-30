@@ -54,7 +54,6 @@ input{
   margin: 20px 0;
   padding-bottom: 10px;
   font-size: 18px;
-  font-weight: bold;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -149,13 +148,17 @@ input::placeholder {
   color:  #f9f9f9;
 }
 
+.theme-dark> header nav a:hover{
+  color: rgb(0 151 240);
+}
+
 section{
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
 .section-home{
-  padding-top: 0px;
+  padding-bottom: 120px;
 }
 
 .section-home .msj-home{
@@ -171,4 +174,6 @@ section{
   flex-direction: column;
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  padding-bottom: 160px;
+  padding-top: 100px;
 }

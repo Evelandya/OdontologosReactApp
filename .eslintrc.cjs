@@ -10,6 +10,6 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
   rules: {
-    "react/react-in-jsx-scope":0
+    "react/prop-types": 0
   },
 }

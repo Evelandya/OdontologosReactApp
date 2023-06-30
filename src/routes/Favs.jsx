@@ -22,15 +22,17 @@ function Favs() {
 
     return (
     <>
+    <section>
     <h1>Mis Favoritos</h1>
     {favs.length === 0 ? (
-        <div className="msj-favs">Aún no tienes odontologos favoritos.</div>
+        <div className="msj-favs">No tienes odontologos favoritos.</div>
       ) : (
     <div className="d-grid pb-5">
     {favs.map((fav)=>
             (<Card user={fav} key={fav.id}  onClick={deleteToFavs}></Card>)
             )}
     </div>)}
+    </section>
     </>
     );
 }

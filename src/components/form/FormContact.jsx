@@ -13,7 +13,6 @@ const FormContact = (props) => {
         } else if (nombre.length <= 5) {
           setMensajeError('Debe ingresar un nombre mayor a 5 caracteres')
         } else {
-          // eslint-disable-next-line react/prop-types
           props.onSubmit({nombre})
           setNombre('')
           setEmail('')

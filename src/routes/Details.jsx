@@ -15,8 +15,8 @@ function Details() {
       setUser(data)
     }
     fetchData()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+
+  }, [params.id])
 
   function handleGoBack() {
     navigate(-1)
