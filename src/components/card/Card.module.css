@@ -11,11 +11,12 @@
     backdrop-filter: blur(20px);
     -webkit-box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
     box-shadow: 12px 12px 26px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s;
 }
 
 .card:hover{
-    width: 400px;
-    transition: width 0.2s;
+    transform: translateY(-8px);
+    border-color: #0090f0a3;
 }
 
 .cardContent{
@@ -47,7 +48,9 @@
 }
 
 .cardFooter a{
-    width: 50%;
+    /*width: 50%;*/
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .cardFooter .fa-light{
