@@ -5,7 +5,7 @@ import 'react-tooltip/dist/react-tooltip.css';
 function Home() {
 
     const [users, setUsers] = useState([])
-    const [favs, setFavs] = useState(JSON.parse(localStorage.getItem('odontologosFavs') || '[]'))
+    const [favs, setFavs] = useState(JSON.parse(localStorage.getItem('odontologosFavs')) || []);
 
     useEffect(() => {
         async function fetchData() {

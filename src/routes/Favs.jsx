@@ -3,7 +3,7 @@ import Card from "../components/card/Card";
 
 function Favs() {
 
-    const [favs, setFavs] = useState(JSON.parse(localStorage.getItem('odontologosFavs')))
+    const [favs, setFavs] = useState(JSON.parse(localStorage.getItem('odontologosFavs') || '[]') )
 
     useEffect(()=>{
         setFavs(JSON.parse(localStorage.getItem('odontologosFavs')))
@@ -19,17 +19,18 @@ function Favs() {
         setFavs(newFavs)
         localStorage.setItem('odontologosFavs', JSON.stringify(newFavs))
       }
+      console.log(favs)
 
     return (
     <>
     <section className="section-favs">
     <h1>Mis Favoritos</h1>
-    {favs.length === 0 ? (
+    {favs.lenght === 0 ? (
         <div className="msj-favs">No tienes odontologos favoritos.</div>
       ) : (
     <div className="d-grid pb-5">
     {favs.map((fav)=>
-            (<Card user={fav} key={fav.id}  onClick={deleteToFavs}></Card>)
+            (<Card key={fav.id}  user={fav}  onClick={deleteToFavs}></Card>)
             )}
     </div>)}
     </section>
